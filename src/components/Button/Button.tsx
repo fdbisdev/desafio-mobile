@@ -15,6 +15,7 @@ interface ButtonProps extends TouchableOpacityProps {
 export function Button({ children, isDisabled, onPress }: ButtonProps) {
   return (
     <Container
+      testID="button"
       isDisabled={isDisabled}
       onPress={onPress}
     >
