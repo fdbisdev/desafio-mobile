@@ -1,7 +1,7 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { StatusBarLight } from './StatusBarLight';
+import { StatusBarLight } from '.';
 
 // Note: test renderer must be required after react-native.
 

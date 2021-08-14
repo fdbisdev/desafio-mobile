@@ -3,7 +3,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { fireEvent, render } from '@testing-library/react-native';
 
-import { Button } from './Button';
+import { Button } from '.';
 
 describe('Button component', () => {
   it('Button is enabled', () => {

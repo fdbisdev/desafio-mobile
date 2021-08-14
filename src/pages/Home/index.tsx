@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Button } from '../../components/Button/Button';
-import { MovieList } from '../../components/MovieList/MovieList';
-import { StatusBarLight } from '../../components/StatusBarLight/StatusBarLight';
+import { Button } from '../../components/Button';
+import { MovieList } from '../../components/MovieList';
+import { StatusBarLight } from '../../components/StatusBarLight';
 
 import {
   Container,

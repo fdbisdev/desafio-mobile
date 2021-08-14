@@ -1,7 +1,7 @@
 import 'react-native';
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Home from './Home';
+import Home from '.';
 
 // Note: test renderer must be required after react-native.
 
