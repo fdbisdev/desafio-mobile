@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   flex: 1;
   margin-bottom: 16px;
-  max-width: 150px;
+  max-width: 130px;
 `;
 
 export const MovieBanner = styled.ImageBackground`
