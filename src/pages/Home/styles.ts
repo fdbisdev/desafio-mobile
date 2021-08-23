@@ -14,5 +14,11 @@ export const ButtonWrapper = styled(View)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-top: ${getStatusBarHeight() + RFValue(12)}px;
+  margin-top: ${getStatusBarHeight() + RFValue(18)}px;
+`;
+
+export const Title = styled.Text`
+  color: #ffffff;
+  font-size: 32px;
+  padding: 16px;
 `;

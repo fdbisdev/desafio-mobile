@@ -6,6 +6,7 @@ import { StatusBarLight } from '../../components/StatusBarLight';
 import {
   Container,
   ButtonWrapper,
+  Title,
 } from './styles';
 
 export default function Home() {
@@ -40,7 +41,10 @@ export default function Home() {
             Popular
           </Button>
         </ButtonWrapper>
-        <MovieList />
+        {
+          popular ? (<Title>Popular Movies</Title>) : (<Title>Upcoming Movies</Title>)
+        }
+        <MovieList popular={popular} upcoming={upcoming} />
       </Container>
     </>
   );
