@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react/prop-types */
+/* eslint-disable camelcase */
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, FlatList } from 'react-native';
-import { getPopularMovies, getUpcomingMovies, getMovieBanner } from '../../services/api';
+import { getPopularMovies, getUpcomingMovies } from '../../services/api';
 
 import { MovieCard } from './MovieCard';
 
@@ -10,6 +13,7 @@ import {
 
 interface MovieListProps {
   popular: boolean;
+  upcoming: boolean;
 }
 
 interface MovieArrayListProps {
@@ -21,15 +25,15 @@ interface MovieArrayListProps {
   originalTitle: string;
   overview: string;
   popularity: number;
-  posterPath: string;
-  releaseDate: string;
+  poster_path: string;
+  release_date: string;
   title: string;
   video: boolean;
   voteAvarage: number;
   voteCount: number;
 }
 
-export function MovieList({ popular }: MovieListProps) {
+export function MovieList({ popular, upcoming }: MovieListProps) {
   const [upcomingMoviesList, setUpcomingMoviesList] = useState();
   const [popularMoviesList, setPopularMoviesList] = useState();
   const [loading, setLoading] = useState(true);
@@ -37,10 +41,10 @@ export function MovieList({ popular }: MovieListProps) {
   const getMovieBannerBaseURL = 'https://image.tmdb.org/t/p/w500/';
 
   async function getMovieList() {
-    const popularMoviesResponse = await getPopularMovies();
+    const popularMoviesResponse: any = await getPopularMovies();
     setPopularMoviesList(popularMoviesResponse.data.results);
 
-    const upcomingMoviesResponse = await getUpcomingMovies();
+    const upcomingMoviesResponse: any = await getUpcomingMovies();
     setUpcomingMoviesList(upcomingMoviesResponse.data.results);
 
     setLoading(false);
@@ -64,6 +68,7 @@ export function MovieList({ popular }: MovieListProps) {
         movieBanner={getMovieBannerBaseURL + item.poster_path}
         movieDate={item.release_date}
         movieName={item.title}
+        movieId={item.id}
       />
     );
   }
@@ -71,11 +76,11 @@ export function MovieList({ popular }: MovieListProps) {
   return (
     <Container>
       {
-        popular
+        popular && !upcoming
           ? (
             <FlatList
               data={popularMoviesList}
-              keyExtractor={(item) => item.id.toString()}
+              keyExtractor={(item) => String(item.id)}
               numColumns={3}
               renderItem={CardList}
             />
@@ -84,7 +89,7 @@ export function MovieList({ popular }: MovieListProps) {
             <FlatList
               data={upcomingMoviesList}
               numColumns={3}
-              keyExtractor={(item) => item.id.toString()}
+              keyExtractor={(item) => String(item.id)}
               renderItem={CardList}
             />
           )
