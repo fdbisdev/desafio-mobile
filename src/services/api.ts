@@ -34,3 +34,13 @@ export async function getMovieDetails(movieId: number) {
     return error;
   }
 }
+
+export async function getMovieCast(movieId: number) {
+  const getMovieCastURL = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=80339999c7adcf8c450b64708612e07d&language=pt-BR`;
+  try {
+    const getMovieDetailsResponse = await axios.get(getMovieCastURL);
+    return getMovieDetailsResponse;
+  } catch (error) {
+    return error;
+  }
+}

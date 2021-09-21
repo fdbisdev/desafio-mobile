@@ -4,6 +4,7 @@ export const Container = styled.TouchableOpacity`
   flex: 1;
   margin-bottom: 16px;
   max-width: 130px;
+  margin-left: 4px;
 `;
 
 export const MovieBanner = styled.ImageBackground`

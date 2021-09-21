@@ -21,7 +21,7 @@ export const MovieBannerLarge = styled.Image.attrs({
   resizeMode: 'cover',
 })`
   width: ${SCREEN_WIDHT}px;
-  height: 468px;
+  height: 400px;
 `;
 
 export const MovieInfoWrapper = styled.View`
@@ -32,7 +32,7 @@ export const MovieInfoWrapper = styled.View`
 
 export const MovieName = styled.Text`
   color: #FFFFFF;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 export const MovieDate = styled.Text`
@@ -49,7 +49,7 @@ export const MovieDetailsWrapper = styled.View`
 export const MovieDuration = styled.Text`
   margin-top: 4px;
   color: #A0a0a0;
-  font-size: 12px;
+  font-size: 14px;
 `;
 
 export const MovieGenre = styled.Text`
@@ -58,9 +58,10 @@ export const MovieGenre = styled.Text`
   font-size: 12px;
 `;
 
-export const MovieCastWrapper = styled.View`
+export const MovieCastWrapper = styled.ScrollView`
   background-color: rgb(52,52,52);
   height: 180px;
+  padding: 10px;
 `;
 
 export const MovieDescriptionSeparator = styled.View`
@@ -100,7 +101,47 @@ export const MovieBannerEffect = styled(LinearGradient)`
   opacity: 0.4;
 `;
 
+export const MovieCastEffect = styled(LinearGradient)`
+  z-index: 1;
+  width: ${SCREEN_WIDHT}px;
+  height: 172px;
+  position: absolute;
+  opacity: 0.4;
+`;
+
+export const MovieBannerMini = styled.Image`
+  width: 118px;
+  height: 172px;
+`;
+
+export const MovieCastBanner = styled.ImageBackground`
+  width: 118px;
+  height: 172px;
+  margin-left: 10px;
+`;
+
+export const ActorName = styled.Text`
+  color: #fff;
+  font-size: 12px;
+  z-index: 2;
+`;
+
+export const CharacterName = styled.Text`
+  color: #fff;
+  font-size: 12px;
+  z-index: 2;
+`;
+
+export const ActorInfoWrapper = styled.View`
+  align-items: center;
+  margin-top: 125px;
+`;
+
 export const MovieDescriptionText = styled.Text`
   margin-top: 12px;
+  font-size: 14px;
+  margin-bottom: 4px;
+  letter-spacing: 1.05px;
+  line-height: 22px;
   color: rgb(210,210,210)
 `;
