@@ -12,6 +12,10 @@ Bem Vindo ao desafio mobile da CI&T, por favor siga as instruções a baixo para
 
 <img src="src/assets/screenshots/ss01.png?raw=true" width="250"> <img src="src/assets/screenshots/ss02.png?raw=true" width="250"> <img src="src/assets/screenshots/ss03.png?raw=true" width="250">
 
+## Minha versão do App
+
+<img src="https://raw.githubusercontent.com/fdbisdev/desafio-mobile/master/src/assets/screenshots/Screenshot_1632259026.png" width="250"> <img src="https://raw.githubusercontent.com/fdbisdev/desafio-mobile/master/src/assets/screenshots/Screenshot_1632259046.png" width="250"> <img src="https://raw.githubusercontent.com/fdbisdev/desafio-mobile/master/src/assets/screenshots/Screenshot_1632259030.png" width="250">
+
 #### Filmes Populares
 
 Como usuário, gostaria de ver a lista de de filmes mais populares em cartaz nos cinemas. Os itens dessa lista deverão conter:
